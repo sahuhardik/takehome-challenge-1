@@ -1,0 +1,33 @@
+.container {
+  width: 87%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 100px;
+  background-color: bisque;
+  padding: 21px;
+}
+
+.nft-card {
+  width: 480px;
+  height:  100px;
+  background-color: azure;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: blue;
+  font-size: 14px;
+}
+
+.fav-btn {
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 5px;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(255, 143, 82);
+  cursor: pointer;
+}
