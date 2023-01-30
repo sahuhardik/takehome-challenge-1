@@ -6,9 +6,7 @@ export class Web3 {
 
   getNftList(): Promise<INft[]> {
     return axios
-      .get(
-        `https://api.rarible.org/v0.1/items/byOwner?owner=ETHEREUM:${this.publicAddress}`
-      )
+      .get(`https://api.rarible.org/v0.1/items/byOwner?owner=ETHEREUM:${this.publicAddress}`)
       .then((response) => response.data.items as INft[]);
   }
 }

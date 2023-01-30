@@ -15,4 +15,4 @@ export const authRouter = express.Router();
   }
  * authRouter.post('/', validate(authSchema) ,controller.login);
  */
-authRouter.post('/',controller.login);
+authRouter.post('/', controller.login);

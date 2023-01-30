@@ -1,8 +1,8 @@
 export interface User {
-	username: string;
-	// ...other user fields
+  username: string;
+  // ...other user fields
 }
 export interface Auth {
-	accessToken: string;
-	user: User
+  accessToken: string;
+  user: User;
 }

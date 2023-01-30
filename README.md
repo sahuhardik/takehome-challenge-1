@@ -2,7 +2,7 @@ There are some point that need to consider, here we have small objective to do s
 
 Points I wanna do, but left because of time crunch
 
-Frontend - 
+Frontend -
 
 1. Setting up Lint, TSlint and prettier.
 2. Organise folder structure in more mannerful way
@@ -13,8 +13,7 @@ Frontend -
 7. Can implement proper routes, and also auth guard
 8. We can either make use of next.js, remix.js or gatsby if we are building website for SEO and other features.
 
-
-Backend - 
+Backend -
 
 1. If application is going on a scale, then probably we can make of nest.js, graphql.
 2. Can implement micro-service pattern if we found there is need (if it is making use case - depends on various factors)

@@ -11,11 +11,8 @@ app.use(express.json());
 // middleware for allow cross origin request
 app.use(cors());
 
-
 app.use('/api', services);
 
 const port = process.env.PORT || 8080;
 
-app.listen(port, () =>
-	console.log(`application is running on :${port}`)
-);
+app.listen(port, () => console.log(`application is running on :${port}`));

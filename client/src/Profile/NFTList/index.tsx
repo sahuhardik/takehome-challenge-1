@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './nft.css'
+import './nft.css';
 
 interface Props {
   accessToken: string;
@@ -13,17 +13,18 @@ interface INft {
   blockchain: string;
 }
 
-function NFT({ nft, toggleFavorite }: { nft: INft, toggleFavorite: Function }) {
+function NFT({ nft, toggleFavorite }: { nft: INft; toggleFavorite: Function }) {
   return (
-    <div className='nft-card' >
+    <div className="nft-card">
       {/* <div>Id: {nft.id}</div>  */}
       <div>Contract Id: {nft.contract}</div>
       <div>Blockchain: {nft.blockchain}</div>
-      <button onClick={() => toggleFavorite()} className='fav-btn' >{ nft.isFavorite ? 'Un-Favorite' : 'Favorite'}</button>
+      <button onClick={() => toggleFavorite()} className="fav-btn">
+        {nft.isFavorite ? 'Un-Favorite' : 'Favorite'}
+      </button>
     </div>
   );
 }
-
 
 export default function NFTList({ accessToken }: Props) {
   const [nfts, setNfts] = useState<INft[]>([]);
@@ -51,9 +52,13 @@ export default function NFTList({ accessToken }: Props) {
         Authorization: `Bearer ${accessToken}`,
       },
     }).then(loadNfts);
-  }
+  };
 
-  return (<div className='container' >
-    {nfts.map((nft) => <NFT nft={nft} toggleFavorite={() => toggleFavorite(nft.id)} key={nft.id} />)}
-  </div>);
+  return (
+    <div className="container">
+      {nfts.map((nft) => (
+        <NFT nft={nft} toggleFavorite={() => toggleFavorite(nft.id)} key={nft.id} />
+      ))}
+    </div>
+  );
 }

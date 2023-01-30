@@ -4,9 +4,7 @@ import { User } from '../../models/user.model';
 
 export const find = async (req: Request, res: Response, next: NextFunction) => {
   const whereClause =
-    req.query && req.query.publicAddress
-      ? { where: { publicAddress: req.query.publicAddress } }
-      : undefined;
+    req.query && req.query.publicAddress ? { where: { publicAddress: req.query.publicAddress } } : undefined;
 
   return await User.findAll(whereClause)
     .then((users: User[]) => res.json(users))
